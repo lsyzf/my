@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	ul,ol,li{
+		list-style: none;
+	}
+	a{
+		text-decoration: none;
+	}
+	#sidemenu{
+		width: 700px;
+		height: 50px;
+		margin: 0 auto;
+	}
+	#sidemenu li{
+		line-height: 50px;
+		float: left;
+		position: relative;
+		margin-right: 30px;
+		color: #fff;
+	}
+	#sidemenu li ol{
+		position: absolute;
+		width: 100px;
+		display: none;
+	}
+	#sidemenu li ol li{
+		line-height: 25px;
+		border-bottom: 1px dashed #ccc;
+	}
+</style>
+<body>
+	<ul id="sidemenu">
+		<li>
+			<a href="#">一级菜单</a>
+			<ol>
+				<li><a href="#">一级菜单</a></li>
+				<li><a href="#">一级菜单</a></li>
+				<li><a href="#">一级菜单</a></li>
+				<li><a href="#">一级菜单</a></li>
+			</ol>
+		</li>
+		<li>
+			<a href="#">二级菜单</a>
+			<ol>
+				<li><a href="#">二级菜单</a></li>
+				<li><a href="#">二级菜单</a></li>
+				<li><a href="#">二级菜单</a></li>
+				<li><a href="#">二级菜单</a></li>
+			</ol>
+		</li>
+		<li>
+			<a href="#">三级菜单</a>
+			<ol>
+				<li><a href="#">三级菜单</a></li>
+				<li><a href="#">三级菜单</a></li>
+				<li><a href="#">三级菜单</a></li>
+				<li><a href="#">三级菜单</a></li>
+			</ol>
+		</li>
+		<li>
+			<a href="#">四级菜单</a>
+			<ol>
+				<li><a href="#">四级菜单</a></li>
+				<li><a href="#">四级菜单</a></li>
+				<li><a href="#">四级菜单</a></li>
+				<li><a href="#">四级菜单</a></li>
+			</ol>
+		</li>
+		<li>
+			<a href="#">五级菜单</a>
+			<ol>
+				<li><a href="#">五级菜单</a></li>
+				<li><a href="#">五级菜单</a></li>
+				<li><a href="#">五级菜单</a></li>
+				<li><a href="#">五级菜单</a></li>
+			</ol>
+		</li>
+	</ul>
+
+
+
+	<script type="text/javascript" src="jquery-1.8.3.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#sidemenu>li").mouseenter(function(){
+				$(this).find("ol").stop().slideDown();
+			}).mouseleave(function(){
+				$(this).find("ol").stop().slideUp();
+			})
+		})
+	</script>
+</body>
+</html>
